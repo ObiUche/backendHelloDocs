@@ -13,10 +13,10 @@ public class Flashcard {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 1000)
     private String frontContent;
 
-    @Column(nullable = false, length = 2000)
+    @Column(nullable = false, columnDefinition = "TEXT")
     private String backContent;
 
     @Column(nullable = false)
@@ -25,11 +25,13 @@ public class Flashcard {
     @Column(nullable = false)
     private String difficultyLevel;
 
-    @Column
+    @Column(nullable = false)
     private String language = "java";
 
+    @Column(columnDefinition = "TEXT")
     private String exampleCode;
 
+    @Column(length = 1000)
     private String tags;
 
     @Column(nullable = false)

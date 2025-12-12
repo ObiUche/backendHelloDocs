@@ -31,6 +31,10 @@ public class FlashcardService {
                 .orElseThrow(() -> new ResourceNotFoundException("Flashcard not found with id " + id));
     }
 
+    public List<Flashcard> getFlashcardByDifficulty(String difficulty){
+        return flashcardRepository.findByDifficultyLevel(difficulty.toUpperCase());
+    }
+
     public List<Flashcard> getFlashcardByCategory(String category){
         return flashcardRepository.findByCategory(category);
     }
