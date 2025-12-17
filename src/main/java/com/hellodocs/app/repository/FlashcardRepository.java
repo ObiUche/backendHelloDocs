@@ -25,12 +25,7 @@ public interface FlashcardRepository  extends JpaRepository<Flashcard, Long> {
     @Query("SELECT DISTINCT f.category FROM Flashcard f")
     List<String> findAllCategories();
 
-    @Query("SELECT DISTINCT f.difficultyLevel FROM Flashcard f ORDER BY " +
-    "CASE f.difficultyLevel " +
-    "WHEN 'BEGINNER' THEN 1 " +
-    "WHEN 'INTERMEDIATE' THEN 2"  +
-    "WHEN 'ADVANCED' THEN 3 " +
-    "ELSE 4 END")
+    @Query("SELECT DISTINCT f.difficultyLevel FROM Flashcard f")
 List<String> findAllDifficultyLevels();
 
 }

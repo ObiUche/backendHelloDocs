@@ -55,7 +55,11 @@ public class SecurityConfig {
 
                         // TEMPORARY: Allow ALL flashcards endpoints without authentication
                         .requestMatchers("/api/flashcards/**").permitAll()
-
+                        .requestMatchers(HttpMethod.GET, "/api/flashcards/**").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/api/flashcards/**").authenticated()
+                        .requestMatchers(HttpMethod.PUT, "/api/flashcards/**").authenticated()
+                        .requestMatchers(HttpMethod.DELETE, "/api/flashcards/**").hasRole("ADMIN")
+                        .requestMatchers("/api/user-progress/**").authenticated()
                         // Admin endpoints
                         .requestMatchers("/api/admin/**").hasRole("ADMIN")
 

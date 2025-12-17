@@ -47,6 +47,7 @@ public class AuthController {
 
     @PostMapping("/register")
     public ResponseEntity<?> registerUser(@Valid @RequestBody UserDTO userDTO) {
+
         User user = userService.registerUser(userDTO);
 
         final UserDetails userDetails = userDetailsService.loadUserByUsername(user.getUsername());
