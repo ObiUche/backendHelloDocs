@@ -249,7 +249,7 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
     borderRadius: 16,
-    backgroundColor: Colors.cardBackground,
+    backgroundColor: Colors.background,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,

@@ -223,8 +223,8 @@ export default function BrowseScreen() {
 
 const styles = StyleSheet.create({
   header: { paddingBottom: 16 },
-  searchBar: { marginBottom: 12, elevation: 0, backgroundColor: Colors.cardBackground },
-  filterButton: { flexDirection: 'row', alignItems: 'center', backgroundColor: Colors.cardBackground, padding: 12, borderRadius: 8, marginBottom: 16 },
+  searchBar: { marginBottom: 12, elevation: 0, backgroundColor: Colors.background },
+  filterButton: { flexDirection: 'row', alignItems: 'center', backgroundColor: Colors.background, padding: 12, borderRadius: 8, marginBottom: 16 },
   filterButtonText: { marginLeft: 8, color: Colors.primary, fontWeight: '600' },
   filtersCard: { marginBottom: 16 },
   filterTitle: { fontSize: 14, fontWeight: '600', color: Colors.text, marginBottom: 8, marginTop: 8 },
